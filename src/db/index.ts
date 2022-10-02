@@ -1,9 +1,5 @@
-import { initializeApp } from "firebase/app";
-// import { connectFirestoreEmulator } from 'firebase/firestore';
-// import { connectAuthEmulator } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore';
-import { getAuth } from "firebase/auth";
-// import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
+import { initializeApp } from 'firebase/app';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_APIKEY,
@@ -15,10 +11,5 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MID,
 };
 
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-// connectFirestoreEmulator(db, 'localhost', 8088);
-export const auth = getAuth();
-
-export default db;
+initializeApp(firebaseConfig);
+export const storage = getStorage();
