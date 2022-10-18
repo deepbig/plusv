@@ -12,7 +12,7 @@ import { handleNavClick } from '../../lib/util';
 
 const images = {
   design:
-    'https://firebasestorage.googleapis.com/v0/b/plus-v.appspot.com/o/resources%2Fcoming_soon_7.png?alt=media&token=91b9e90b-6415-4ea0-b304-119bd1b78a2c',
+    'https://firebasestorage.googleapis.com/v0/b/plus-v.appspot.com/o/resources%2FDesign_section.png?alt=media&token=fdad5b52-afc8-409b-9581-037a1989f99b',
   impl:
     'https://firebasestorage.googleapis.com/v0/b/plus-v.appspot.com/o/resources%2Fcoming_soon_6.png?alt=media&token=2c8dc9d9-73e5-4452-876c-3bc4a6d7e150',
   result:
