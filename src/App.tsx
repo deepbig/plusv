@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { useAppDispatch, useAppSelector } from './hooks';
 import { getBackdrop } from './modules/backdrop';
@@ -24,15 +24,21 @@ function MyApp() {
   const backdrop = useAppSelector(getBackdrop);
   const snackbar = useAppSelector(getSnackbar);
 
+  useEffect(() => {
+    window.location.replace(
+      'https://plus-v.notion.site/PLUSV-304f10d2da6e4dd0b4259b814e88eb83'
+    );
+  }, []);
+
   const handleSnackbarClose = () => {
     dispatch(setSnackbarOpen(false));
   };
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<MainPage />} />
-      </Routes>
+      </Routes> */}
       <Backdrop
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1000 }}
         open={backdrop}
@@ -95,12 +101,14 @@ export default function ToggleColorMode() {
     [mode]
   );
 
-  return (
-    <ColorModeContext.Provider value={colorMode}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <MyApp />
-      </ThemeProvider>
-    </ColorModeContext.Provider>
-  );
+  return <MyApp />;
+
+  // return (
+  //   <ColorModeContext.Provider value={colorMode}>
+  //     <ThemeProvider theme={theme}>
+  //       <CssBaseline />
+  //       <MyApp />
+  //     </ThemeProvider>
+  //   </ColorModeContext.Provider>
+  // );
 }
